@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Lung Risk Calculator</title>
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/index.css">
+
+		<!--Date Picker -->
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	</head>
+
+	<div class="container-fluid">
+		<div class="headerContent">
+			<div class="left-side">
+				<p>
+					Current or Past Smokers
+				</p>
+				<h1>Lung Cancer Risk Estimation</h1>
+				<a href="#riskEstimationTool" class="btn"><i class="fa fa-download"></i> Get Started</a>
+			</div>
+			<div class="right-side">
+				<div class="image-right-side">
+					<img src="./images/calculator.jpg" style="width:500px;height:300px;"></img>
+				</div>
+				<div class="image-placeholder">
+
+					<p>
+						I Nawaraj Subedi as a Web Application Developer developed the Clocking System which can be
+						used by the small employer to generate the employee time sheet and paystubs quickly. With,
+						this employer can calculate a pay by deducting all the required benefits in real time. Regarding
+						the privacy concern, no information will be saved or misused while using the application. If any
+						employer needs any changes in any part, feel free to contact me at softwareeningeer@nawarajsubedi.com
+						or nawarajsubedi.com
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- Form Container Start -->
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12" id="riskEstimationTool" style="height: auto">
+
+					<form id="riskEstimation" method="post" class="form-horizontal" action="payStubs.html">
+
+						<section data-step="0">
+							<div class="page-header">
+								<h1>Individual Background Characteristics </h1>
+								<div class="step-counter">
+									<span class="stepStatus"> Step 1 of 3 <span class="dot-counter"> <span class="activedot"></span> <span class="passivedot"></span> <span class="passivedot"></span> <span class="passivedot"></span> </span> </span>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-xs-2">
+									<input type="text" id="age" class="form-control" name="age" placeholder="Age" onkeyup="calculateRisk()"/>
+								</div>
+								<div class="col-xs-2">
+									<small id="label" for="input">lb (e.g: 120)</small>
+									<input type="text" id="weight" class="form-control" name="weight" placeholder="Weight" onkeyup="calculateRisk()"/>
+								</div>
+								<div class="col-xs-2">
+									<small id="label" for="input">Ft (e.g: 7.2) </small>
+									<input type="text" id="height" class="form-control" name="height" placeholder="Height" onkeyup="calculateRisk()"/>
+								</div>
+								<div class="col-xs-3" id="holder">
+									<small id="label" for="input">Race</small>
+									<select id="race" name="race" class="form-control-input" onchange="calculateRisk()">
+										<option value="">-- Select a Race --</option>
+										<option value="0">White</option>
+										<option value="0.0812744">Black</option>
+										<option value="-0.7434744">Hispanic</option>
+										<option value="-0.466585">Asian</option>
+										<option value="0">Alaskan</option>
+										<option value="1.027152">Hawaiian</option>
+									</select>
+								</div>
+								<div class="col-xs-3" id="holder">
+									<small id="label" for="input">Education</small>
+									<select id="education" name="education" class="form-control-input" onchange="calculateRisk()">
+										<option value="">-- Select a Education --</option>
+										<option value="1">Less than high school</option>
+										<option value="2">High School graduate</option>
+										<option value="3">Training after high school</option>
+										<option value="4">Some college</option>
+										<option value="5">College graduate</option>
+										<option value="6">Postgraduate Training</option>
+									</select>
+								</div>
+							</div>
+						</section>
+
+						<section data-step="1">
+							<div class="page-header">
+								<h1>Individual's Health Background </h1>
+								<div class="step-counter">
+									<span class="stepStatus"> Step 2 of 3 <span class="dot-counter"> <span class="activedot"></span> <span class="activedot"></span> <span class="passivedot"></span> <span class="passivedot"></span> </span> </span>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-xs-5 custom-control custom-checkbox checkbox-xl">
+									<input type="checkbox" name="copd" id ="copd" class="form-check-input"  onchange="calculateRisk()">
+									<label class="form-check-label">&nbsp;&nbsp;&nbsp Chronic Obstructive Pulmonary Disease (COPD)</label>
+								</div>
+								<div class="col-xs-4">
+									<input type="checkbox" class="form-check-input" name="historyOfCancer" id="historyOfCancer"  onchange="calculateRisk()">
+									<label class="form-check-label">&nbsp;&nbsp;&nbsp History of Cancer</label>
+								</div>
+								<div class="col-xs-3">
+									<input type="checkbox" class="form-check-input" name="familyHistoryOfLungCancer" id="familyHistoryOfLungCancer"  onchange="calculateRisk()">
+									<label class="form-check-label">&nbsp;&nbsp;&nbsp Family history of lung cancer</label>
+								</div>
+							</div>
+						</section>
+						<section data-step="2">
+							<div class="page-header">
+								<h1>Individual's Smoking Habit</h1>
+								<div class="step-counter">
+									<span class="stepStatus"> Step 3 of 3 <span class="dot-counter"> <span class="activedot"></span> <span class="activedot"></span> <span class="activedot"></span> <span class="passivedot"></span> </span> </span>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-xs-3" id="holder">
+									<small id="label" for="input">Smoking Habit</small>
+									<select  name="smokingHabit" class="form-control-input" id="smokingHabit"  onchange="calculateRisk()">
+										<option value="">-- Select a Smoking habit --</option>
+										<option value="0.2597431">Current Smoker</option>
+										<option value="0">Former Smoker</option>
+									</select>
+								</div>
+								<div class="col-xs-3">
+									<input type="text" class="form-control" id="cigarettesPerDay" name="cigarettesPerDay" placeholder="Cigarettes per day" onkeyup="calculateRisk()"/>
+								</div>
+								<div class="col-xs-3">
+									<input type="text" class="form-control" id="yearsSmoking" name="yearsSmoking" placeholder="Years smoking" onkeyup="calculateRisk()"/>
+								</div>
+								<div class="col-xs-3">
+									<input type="text" class="form-control" id="yearSinceQuittingSmoking" name="yearSinceQuittingSmoking" placeholder="Years since quitting smoking" onkeyup="calculateRisk()"/>
+								</div>
+
+								<div class="col-xs-3">
+									<input type="text" class="form-control" id="yearSinceQuittingSmoking1" name="yearSinceQuittingSmoking1" placeholder="Years since quitting smoking" onkeyup="calculateRisk()"/>
+								</div>
+							</div>
+						</section>
+						<div class="page-header"></div>
+						<div class="grid-container">
+							<input type="submit" name="calculateRiskEstimation" value="Calculate Risk Estimation" class="marketing-button form-section-submit"/>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Form Validation -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrapValidator.js"></script>
+		<script src="js/index.js"></script>
+	</div>
+</html>
