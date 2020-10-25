@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lung Cancer Risk Score</title>
+
+    <link rel='stylesheet' type="text/css" href="css/riskScore.css" />
+
+    <!-- Relax CSS: https://ziyadsk.github.io/relaxCSS/ -->
+    <link rel='stylesheet' type="text/css" href="css/relaxCSS.css" />
+
+    <style>
+        #risk {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            color: #B4432B;
+        }
+
+        img {
+            opacity: 0.2;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div id='holder' class="container text-container">
+    <div class="row center-text">
+        <div class="col-12">
+            <h1>Lung Cancer Risk Estimation in Current and Past Smokers (6-year)</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <h2 class="center-text">Vital Information</h2>
+            <table class="tab center">
+                <tr>
+                    <th>Age:</th>
+                    <td id='age'></td>
+                </tr>
+                <tr>
+                    <th>BMI:</th>
+                    <td id='bmi'></td>
+                </tr>
+                <tr>
+                    <th>Race:</th>
+                    <td id='race'></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-4">
+            <h2 class="center-text">Smoking Information </h2>
+            <table class="tab center">
+                <tr>
+                    <th>Smoking Habit</th>
+                    <td id='smoker'></td>
+                </tr>
+                <tr>
+                    <th>Cigarettes per day </th>
+                    <td id='cigarettesperday'></td>
+                </tr>
+                <tr>
+                    <th>Years smoking</th>
+                    <td id='yearssmoking'></td>
+                </tr>
+                <tr>
+                    <th>Years since quitting smoking </th>
+                    <td id='yesrssincequittingsmoking'></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-4 center-text">
+            <h2>Your Lung Cancer Risk Estimation </h2>
+            <div id="risk"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+        var parameters = location.search.substring(1).split("&");
+        var x = 0;
+
+        var formValues = String(parameters);
+
+        if (formValues.includes("copd")) {
+            x = x + 1;
+        }
+        if (formValues.includes("historyOfCancer")) {
+            x = x + 1;
+        }
+        if (formValues.includes("familyHistoryOfLungCancer")) {
+            x = x + 1;
+        }
+
+        // Display age
+        var age = parameters[0].split("=");
+        document.getElementById('age').innerHTML = unescape(age[1]);
+
+        // Display race
+        var race = parameters[3].split("=");
+        if (unescape(race[1]) == "-0.7434744") {
+            document.getElementById('race').innerHTML = "Hispanic";
+        } else if (unescape(race[1]) == "-0.466585") {
+            document.getElementById('race').innerHTML = "Asian";
+        } else if (unescape(race[1]) == "1.027152") {
+            document.getElementById('race').innerHTML = "Hawaiian";
+        } else if (unescape(race[1]) == "0.3944778") {
+            document.getElementById('race').innerHTML = "Black";
+        } else {
+            document.getElementById('race').innerHTML = "White/Alaskan";
+        }
+
+        // Smoker
+        var smoker = parameters[x + 5].split("=");
+        if (unescape(smoker[1]) == "0.2597431") {
+            document.getElementById('smoker').innerHTML = "Current Smoker";
+        } else {
+            document.getElementById('smoker').innerHTML = "Former Smoker";
+        }
+
+        // Cigarettes per day
+        var cigarettesperday = parameters[x + 6].split("=");
+        document.getElementById('cigarettesperday').innerHTML = unescape(cigarettesperday[1]);
+
+        // Years Smoking
+        var yearssmoking = parameters[x + 7].split("=");
+        document.getElementById('yearssmoking').innerHTML = unescape(yearssmoking[1]) + " Years";
+
+
+        // Years since quitting smoking
+        var yesrssincequittingsmoking = parameters[x + 8].split("=");
+        document.getElementById('yesrssincequittingsmoking').innerHTML = unescape(yesrssincequittingsmoking[1]) + " Years";
+
+        // Risk Score
+        var risk = parameters[x + 9].split("=");
+        document.getElementById('risk').innerHTML = unescape(risk[1]) + "%";
+
+
+        // bmi
+        var bmi = parameters[x + 10].split("=");
+        document.getElementById('bmi').innerHTML = unescape(bmi[1]) + " kg/m2";
+    </script>
+</body>
+
+</html>

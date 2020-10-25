@@ -9,7 +9,7 @@
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/index.css">
 
-		<!--Date Picker -->
+		<!--Form Validation -->
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -31,12 +31,11 @@
 				<div class="image-placeholder">
 
 					<p>
-						I Nawaraj Subedi as a Web Application Developer developed the Clocking System which can be
-						used by the small employer to generate the employee time sheet and paystubs quickly. With,
-						this employer can calculate a pay by deducting all the required benefits in real time. Regarding
-						the privacy concern, no information will be saved or misused while using the application. If any
-						employer needs any changes in any part, feel free to contact me at softwareeningeer@nawarajsubedi.com
-						or nawarajsubedi.com
+						<a id="bold">Note: </a> <br>
+						This calculator is based on study-group subjects between the ages of 55 and 74. It is not appropriate for subjects outside this age range or for subjects who have never smoked.
+					<br><br>
+						<a id="bold">References: </a> <br>
+						Tammemagi MC, Katki HA, Hocking WG, et al. Selection criteria for lung-cancer screening. N Engl J Med. 2013 Feb 21;368(8):728-36. doi: 10.1056/NEJMoa1211776. PubMed ID: 23425165
 					</p>
 				</div>
 			</div>
@@ -46,7 +45,7 @@
 			<div class="row">
 				<div class="col-xs-12" id="riskEstimationTool" style="height: auto">
 
-					<form id="riskEstimation" method="post" class="form-horizontal" action="payStubs.html">
+					<form id="riskEstimation" method="get" class="form-horizontal" action="riskScore.html">
 
 						<section data-step="0">
 							<div class="page-header">
@@ -72,7 +71,7 @@
 									<select id="race" name="race" class="form-control-input" onchange="calculateRisk()">
 										<option value="">-- Select a Race --</option>
 										<option value="0">White</option>
-										<option value="0.0812744">Black</option>
+										<option value="0.3944778">Black</option>
 										<option value="-0.7434744">Hispanic</option>
 										<option value="-0.466585">Asian</option>
 										<option value="0">Alaskan</option>
@@ -144,7 +143,10 @@
 								</div>
 
 								<div class="col-xs-3">
-									<input type="text" class="form-control" id="yearSinceQuittingSmoking1" name="yearSinceQuittingSmoking1" placeholder="Years since quitting smoking" onkeyup="calculateRisk()"/>
+									<input type="hidden" class="form-control" id="lungRiskScore" name="lungRiskScore"/>
+								</div>
+								<div class="col-xs-3">
+									<input type="hidden" class="form-control" id="bmi" name="bmi"/>
 								</div>
 							</div>
 						</section>
