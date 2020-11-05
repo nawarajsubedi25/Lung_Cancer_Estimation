@@ -195,11 +195,8 @@ input[type=checkbox]
 @media only screen and (max-width: 600px) {
   input[type=checkbox]
   {
-    /* Double-sized Checkboxes */
-    -ms-transform: scale(1); /* IE */
-    -moz-transform: scale(1); /* FF */
-    -webkit-transform: scale(1); /* Safari and Chrome */
-    -o-transform: scale(1); /* Opera */
+    width:40px;
+    height:40px;
     padding: 15px;
     margin-left: 10px;
   }
