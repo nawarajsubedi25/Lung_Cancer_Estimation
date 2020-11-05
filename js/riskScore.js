@@ -7,12 +7,6 @@ jQuery(document).ready(function ($) {
 
     });
 
-
-   $('#cancerCases').load("./images/CancerCasesInUS.html");
-   $('#earlyScanning').load("./images/CancerCasesInUS.html");
-
-
-
    var parameters = location.search.substring(1).split("&");
            var x = 0;
 
@@ -75,4 +69,6 @@ jQuery(document).ready(function ($) {
            // bmi
            var bmi = parameters[x + 10].split("=");
            document.getElementById('bmi').innerHTML = unescape(bmi[1]) + " kg/m2";
+
+
 });
