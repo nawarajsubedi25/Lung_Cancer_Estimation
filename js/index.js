@@ -24,9 +24,19 @@ function calculateRisk() {
     education = Number(document.getElementById("education").value);
 
     weight = document.getElementById("weight").value;
+    checkHeightDecimal= parseFloat(document.getElementById("height").value);
+    if (Number.isInteger(checkHeightDecimal))
+    {
+    height = document.getElementById("height").value;
+    height = parseInt(height);
+    }
+    else
+    {
     height = document.getElementById("height").value.split(".");
-    // BMI Calculator
     height = parseInt(height[0]) + (0.0833333 * parseInt(height[1]));
+    }
+    // BMI Calculator
+
     bmi = ((weight * 0.453592) / (Math.pow(0.3048 * height, 2))).toFixed(2);
     document.getElementById("bmi").value = bmi;
 
