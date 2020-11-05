@@ -189,4 +189,8 @@ input[type=checkbox]
     .form-section-submit {
     float: right;
 }
+input[type=checkbox]
+{
+  zoom : 1.5;
+}
 }
