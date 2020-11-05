@@ -190,4 +190,10 @@ input[type=checkbox]
     .form-section-submit {
     float: right;
 }
+input[type=checkbox] {
+  /* All browsers except webkit*/
+  transform: scale(2);
+  /* Webkit browsers*/
+  -webkit-transform: scale(2);
+}
 }
