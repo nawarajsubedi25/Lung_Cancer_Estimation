@@ -185,15 +185,22 @@ input[type=checkbox]
 }
 }
 
-@media screen and (max-width: 600px)
+@media screen and (min-width: 46.875em)
 {
     .form-section-submit {
     float: right;
 }
-input[type=checkbox] {
-  /* All browsers except webkit*/
-  transform: scale(1);
-  /* Webkit browsers*/
-  -webkit-transform: scale(1);
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  input[type=checkbox]
+  {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1); /* IE */
+    -moz-transform: scale(1); /* FF */
+    -webkit-transform: scale(1); /* Safari and Chrome */
+    -o-transform: scale(1); /* Opera */
+    padding: 15px;
+    margin-left: 10px;
+  }
 }
