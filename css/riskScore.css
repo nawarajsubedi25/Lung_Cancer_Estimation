@@ -256,7 +256,15 @@ p {
             color: #B4432B;
         }
 
-
+.btn {
+      background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-size: 20px;
+}
 
         #preloader {
     position: fixed;
