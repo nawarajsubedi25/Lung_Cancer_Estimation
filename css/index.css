@@ -1,10 +1,10 @@
-.form-control{
-     display: inline-block; 
-     height: 52px; 
+.form-control {
+    display: inline-block;
+    height: 52px;
     width: 100%;
     margin: 0 0 15px;
     padding: 1.0625em 2em;
-     color: #30373b; 
+    color: #30373b;
     font-family: ShopifySans, Helvetica, Arial, sans-serif;
     font-size: 16px;
     -webkit-box-shadow: 0 0 0 1px #c4cdd5;
@@ -17,10 +17,12 @@
     -moz-appearance: none;
     appearance: none;
 }
-input[type=text]:focus{
-    border: 2px solid green!important;
-    background-color: #edf0f5!important;
+
+input[type=text]:focus {
+    border: 2px solid green !important;
+    background-color: #edf0f5 !important;
 }
+
 /*
 Remove bold from label
 */
@@ -28,21 +30,22 @@ label {
     font-weight: normal !important;
 }
 
-#label{
+#label {
     margin-bottom: -50px;
     padding-left: 20px;
     padding-top: 2px;
     position: absolute;
     color: bold;
 }
-.form-control-input{
-     display: inline-block; 
-     height: 52px; 
+
+.form-control-input {
+    display: inline-block;
+    height: 52px;
     width: 100%;
     margin: 0 0 15px;
     padding: 3em 2em 0em 2em;
-    padding-top:1em;
-     color: #30373b; 
+    padding-top: 1em;
+    color: #30373b;
     font-family: ShopifySans, Helvetica, Arial, sans-serif;
     font-size: 16px;
     -webkit-box-shadow: 0 0 0 1px #c4cdd5;
@@ -55,28 +58,32 @@ label {
     -moz-appearance: none;
     appearance: none;
 }
+
 .marketing-button {
-  padding: 10px 10px;
-  font-size: 24px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  margin-bottom: 1em;
+    padding: 10px 10px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    margin-bottom: 1em;
 }
 
-.marketing-button:hover {background-color: #3e8e41}
+.marketing-button:hover {
+    background-color: #3e8e41
+}
 
 .marketing-button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
+
 .btn {
-      background-color: #4CAF50;
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 12px 30px;
@@ -89,45 +96,53 @@ label {
 .btn:hover {
     background-color: #3e8e41;
 }
-.container-fluid{
+
+.container-fluid {
     margin-top: 4em;
-     background: #f4f6f8;
+    background: #f4f6f8;
 }
-.headerContent{
+
+.headerContent {
     margin-top: 3em;
     margin-left: 5em;
     overflow: hidden;
     padding-bottom: 2em;
 }
-.left-side{
-    float:left;
-    width:50%;
+
+.left-side {
+    float: left;
+    width: 50%;
 }
-.right-side{
+
+.right-side {
     float: right;
-    width:50%;
+    width: 50%;
     text-align: right;
 }
-.image-right-side{
+
+.image-right-side {
     margin-right: 3em;
 }
+
 .image-placeholder {
     background-color: #eee;
     display: flex;
     margin: 5px;
 }
 
-.image-placeholder > p {
+.image-placeholder>p {
     align-self: center;
     text-align: center;
     width: 100%;
-    padding: 0.5em!important;
+    padding: 0.5em !important;
 }
-.stepStatus{
+
+.stepStatus {
     float: right;
-    margin-top: -1em!important;
+    margin-top: -1em !important;
 }
-.activedot{
+
+.activedot {
     width: 10px;
     height: 10px;
     display: inline-block;
@@ -135,8 +150,9 @@ label {
     border-radius: 50%;
     background-color: #5c6ac4;
 }
-.passivedot{
-     width: 10px;
+
+.passivedot {
+    width: 10px;
     height: 10px;
     display: inline-block;
     margin: 0 0.125em;
@@ -144,60 +160,66 @@ label {
     background-color: #dfe3e8;
 
 }
+
 .glyphicon-ok-circle {
-     font-size: 30px;
+    font-size: 30px;
     line-height: 50px;
     padding-top: 4px;
-    margin-right:4px;
+    margin-right: 4px;
 }
 
 .glyphicon-remove-circle {
     font-size: 30px;
     line-height: 50px;
     padding-top: 4px;
-    margin-right:4px;
+    margin-right: 4px;
 }
 
 .glyphicon-refresh {
-     font-size: 30px;
+    font-size: 30px;
     line-height: 50px;
     padding-top: 4px;
-    margin-right:4px;
+    margin-right: 4px;
 }
+
 .popover {
     color: white;
     background-color: red;
 }
-.image-placeholder p{
-    text-align:left;
+
+.image-placeholder p {
+    text-align: left;
 }
+
 @media screen and (min-width: 640px) {
 
-input[type=checkbox]
-{
-  /* Double-sized Checkboxes */
-  -ms-transform: scale(3); /* IE */
-  -moz-transform: scale(3); /* FF */
-  -webkit-transform: scale(3); /* Safari and Chrome */
-  -o-transform: scale(3); /* Opera */
-  padding: 15px;
-  margin-left: 10px;
-}
+    input[type=checkbox] {
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(3);
+        /* IE */
+        -moz-transform: scale(3);
+        /* FF */
+        -webkit-transform: scale(3);
+        /* Safari and Chrome */
+        -o-transform: scale(3);
+        /* Opera */
+        padding: 15px;
+        margin-left: 10px;
+    }
 }
 
-@media screen and (min-width: 46.875em)
-{
+@media screen and (min-width: 46.875em) {
     .form-section-submit {
-    float: right;
+        float: right;
+    }
 }
-}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  input[type=checkbox]
-  {
-    width:40px;
-    height:40px;
-    padding: 15px;
-    margin-left: 10px;
-  }
+    input[type=checkbox] {
+        width: 40px;
+        height: 40px;
+        padding: 15px;
+        margin-left: 10px;
+    }
 }

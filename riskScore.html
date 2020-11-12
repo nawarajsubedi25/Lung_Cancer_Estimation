@@ -9,21 +9,22 @@
     <link rel='stylesheet' type="text/css" href="css/relaxCSS.css" />
 
     <!-- Bootstrap css -->
-    <link  href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
     <!-- Script for Jquery -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
+    <!-- Script that load Dash map, pie charts etc -->
     <script>
-    $(function(){
-     $('#earlyScanning').load("./images/PercentageOfDeathByAge.html");
-      $('#percentageOfServivingByStage').load("./images/PercentageOfServivingByStage.html");
-       $('#causeOfLungCancer').load("./images/CauseOfLungCancer.html");
-        $('#cancerCases').load("./images/CancerCasesInUS.html");
-         $('#ldctVsX-Ray').load("./images/LDCTVsX-Ray.html");
-    });
+        $(function() {
+            $('#earlyScanning').load("./images/PercentageOfDeathByAge.html");
+            $('#percentageOfServivingByStage').load("./images/PercentageOfServivingByStage.html");
+            $('#causeOfLungCancer').load("./images/CauseOfLungCancer.html");
+            $('#cancerCases').load("./images/CancerCasesInUS.html");
+            $('#ldctVsX-Ray').load("./images/LDCTVsX-Ray.html");
+        });
     </script>
 </head>
 
@@ -89,14 +90,14 @@
             <div id="cancerCases"></div>
         </div>
     </div>
-        <div class="row">
-            <div class="col-6">
-                <div id="earlyScanning"></div>
-            </div>
-                <div class="col-6">
-                    <div id="percentageOfServivingByStage"></div>
-                </div>
+    <div class="row">
+        <div class="col-6">
+            <div id="earlyScanning"></div>
         </div>
+        <div class="col-6">
+            <div id="percentageOfServivingByStage"></div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-6">
             <div id="causeOfLungCancer"></div>
@@ -110,4 +111,5 @@
 
 
 <script src="js/riskScore.js"></script>
+
 </html>
