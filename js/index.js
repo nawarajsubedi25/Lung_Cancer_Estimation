@@ -5,7 +5,6 @@ $(document).ready(function() {
 );
 
 function calculateRisk() {
-
     SmokingHabit();
     var age=0;
     var race=0;
