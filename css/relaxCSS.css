@@ -1,1 +1,6 @@
-.tab{padding:2em 0;border-spacing:0}.tab th{color:#444;font-weight:400;border:1px solid #ddd;padding:1em;background-color:#eee}.tab td{color:#666;padding:1em;border:.05em solid #ddd}
+.tab{padding:2em 0;border-spacing:0}
+.tab th{color:#444;font-weight:400;border:1px solid #ddd;padding:1em;background-color:#eee}
+.tab td{color:#666;padding:1em;border:.05em solid #ddd}
+.center-text {
+    text-align: center!important;
+}
