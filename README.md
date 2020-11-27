@@ -11,4 +11,4 @@ etc. of patients.
 
 
 ### <h2 align="center">Calculate Your Lung Cancer Estimation </h2>
-To calculate lung cancer Estimation, please click the link [Lung Cancer Calculator](https://github.gatech.edu/pages/nsubedi3/GatechCS6440IndividualProject/ "Lung Cancer Calculator")
+To calculate lung cancer Estimation, please click the link [Lung Cancer Calculator](https://nawarajsubedi25.github.io/Lung_Cancer_Estimation/ "Lung Cancer Risk Calculator")
